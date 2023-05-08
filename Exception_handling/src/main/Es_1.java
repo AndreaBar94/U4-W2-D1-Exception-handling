@@ -26,10 +26,10 @@ public class Es_1 {
 			
 			
 			do {
-				System.out.println("Inserisci un numero da 1 a 10, poi un numero da 1 a 5; in alternativa premi 0 per chiudere:");
+				System.out.println("Inserisci un numero da 1 a 10, poi un numero da 0 a 4; in alternativa premi 0 per chiudere:");
 				userNum = input.nextInt();
 				
-				if(userNum != 0) {
+				if(userNum != 0 && userNum > 0 && userNum <= 10) {
 				try {
 					
 					System.out.println("Ora un numero da 0 a 4");
@@ -41,9 +41,13 @@ public class Es_1 {
 					System.out.println("Errore " + e);
 				}
 				
-				}else {
+				}else if(userNum == 0) {
+					
+					System.out.println("Un bacio ai pupi e 'na carezza ar cane!");
+				}
+				else {
 				
-				System.out.println("Un bacio ai pupi e 'na carezza ar cane!");
+					System.out.println("Deve essere un numero compreso tra 1 e 10, oppure 0 per chiudere!");
 				
 				}
 				
